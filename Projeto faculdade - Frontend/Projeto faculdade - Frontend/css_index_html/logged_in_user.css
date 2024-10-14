@@ -1,0 +1,169 @@
+/* ==========================
+   LOGGED IN USER > BEGINNING 
+   ========================== */
+   
+   /* ===============================
+      LOGGED-IN USER ICON > BEGINNING 
+      =============================== */
+.user_logado {
+    display: none;
+    font-size: 4rem;
+    gap: 10px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--font-color);
+  }
+
+    /* =========================
+       LOGGED-IN USER ICON > END
+       ========================= */
+  
+
+    /* ===============================
+       LOGGED-IN USER MENU > BEGINNING 
+       =============================== */
+  
+  .menu-logado {
+    display: flex;
+    opacity: 0; 
+    position: absolute; 
+    visibility: hidden; 
+    transition: opacity 0.3s ease;
+    flex-direction: column;
+    width: 100%;
+    max-width: 350px;
+    height: 400px;
+    top: 98px;
+    right: 10px;
+    border-radius: 15px;
+    border: 1px solid var(--container-border);
+  }
+  
+  .menu-logado .nome_empresa, .cadastrar_funcionario,  .leave {
+      background-color: var(--header-color);
+      width: 100%;
+      height: 100%;
+      border: none;
+  }
+  
+  .nome_empresa:hover, .cadastrar_funcionario:hover, .leave:hover {
+    cursor: pointer;
+    background: var(--back-menu-logado);
+  }
+
+        /* =========================
+           NAME AND ICON > BEGINNING 
+           ========================= */
+    
+  .menu-logado .nome_empresa {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  
+  }
+  
+  .nome_empresa .logo {
+    font-size: 4rem;
+  }
+  
+  .nome_empresa #logado {
+    font-size: 2rem;
+  }
+
+        /* ===================
+           NAME AND ICON > END 
+           =================== */
+  
+  
+        /* ====================================
+           REGISTER EMPLOYEE BUTTON > BEGINNING
+           ==================================== */
+  
+  .menu-logado .cadastrar_funcionario {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid var(--container-border);
+    border-top: 1px solid var(--container-border);
+  }
+  
+  .cadastrar_funcionario .fa-wrench {
+    font-size: 4rem;
+    padding: 10px;
+    color: var(--font-color)
+  }
+  
+  .cadastrar_funcionario .cf_text {
+    display: flex;
+    text-align: start;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .cadastrar_funcionario .cf_title {
+    font-size: 2rem;
+    color: var(--font-color)
+  }
+  
+  .cadastrar_funcionario .cf_subtitle {
+    font-size: 1.5rem;
+    color: var(--font-color);
+    opacity: 80%;
+  }
+
+        /* ==============================
+           REGISTER EMPLOYEE BUTTON > END
+           ============================== */
+  
+  
+        /* ==========================
+           LOG OUT BUTTON > BEGINNING
+           ========================== */
+
+  .menu-logado .leave {
+    display: flex;
+    align-items: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  
+  .leave .image_leave {
+    width: 50px;
+    margin: 0 10px;
+  }
+  
+  .leave .text_leave {
+    font-size: 2rem;
+    color: #8B0000;
+    margin: 0 10px;
+  }
+
+        /* ====================
+           LOG OUT BUTTON > END
+           ==================== */
+
+    /* ==============================
+       LOGGED-IN USER MENU> BEGINNING 
+       ============================== */
+
+    /* ==============================
+       SECTION_ONE BUTTON > BEGINNING 
+       ============================== */
+  
+  #cdf {
+    display: none;
+  }
+  
+    /* ========================
+       SECTION_ONE BUTTON > END 
+       ======================== */
+
+  /* ==================
+   LOGGED IN USER > END
+   ==================== */

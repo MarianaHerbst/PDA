@@ -1,0 +1,184 @@
+/* ===================================
+   SECTION_FIVE > FORMFUNC > BEGINNING
+   =================================== */
+
+.section_five .formFunc {
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 3px 4px 5px 4px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+}
+
+  /* ============================
+     FORMFUNC > TITLE > BEGINNING
+     ============================ */
+
+.formFunc h1 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-size: 6rem;
+  background: var(--text-blue-gradient-color);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s;
+}
+
+  /* ======================
+     FORMFUNC > TITLE > END
+     ====================== */
+
+
+  /* ==================================
+     FORMFUNC > INPUT_GROUP > BEGINNING
+     ================================== */
+  
+.formFunc .input_group {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+  }
+
+  /* ============================
+     FORMFUNC > INPUT_GROUP > END
+     ============================ */
+
+
+  /* ======================================
+     FORMFUNC > CONTAINER_INPUT > BEGINNING
+     ====================================== */
+  
+.container_input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 13px;
+  text-align: left;
+  width: 100%;
+  }
+  
+.container_input label {
+  font-size: 1.5rem;
+  color: var(--font-color);;
+}
+  
+.container_input input, .container_input select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  border: none;
+  background: rgba(143, 142, 142, 0.3);
+  border-radius: 15px;
+  font-size: 1.6rem;
+  color: var(--font-color);
+  font-weight: 800;
+}
+
+.container_input select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-size: 16px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6"><path fill="black" d="M0 0 L5 6 L10 0 H0 Z"/></svg>'); /* Setinha para baixo */
+  background-repeat: no-repeat;
+  background-position: right 10px center; 
+  background-size: 10px 6px;
+}
+ 
+select option {
+  font-size: 2rem;
+  background-color: var(--back-color);
+}
+
+input[readonly] {
+    background: rgba(143, 142, 142, 0.6);
+    cursor: not-allowed;
+}
+
+  /* ================================
+     FORMFUNC > CONTAINER_INPUT > END
+     ================================ */
+
+
+  /* ==============================
+     FORMFUNC > BUTTONS > BEGINNING
+     ============================== */
+  
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    margin: 15px 0;
+}
+  
+.buttons button {
+    font-size: 22px;
+    padding: 10px;
+    width: 50%;
+    cursor: pointer;
+    border-radius: 15px;
+    background: linear-gradient(var(--back-color), var(--back-color)) padding-box, var(--blue-gradient-color) border-box;
+    border: 1px solid transparent;
+    color: var(--font-color);
+}
+
+  /* ========================
+     FORMFUNC > BUTTONS > END
+     ======================== */
+
+
+  /* ===============================
+     FORMFUNC > MESSAGES > BEGINNING
+     =============================== */
+
+#successMessage {
+    display: flex;
+    justify-content: start;
+    font-size: 15px;
+    margin-left: 12px;
+    color:#08a84b
+}
+
+  
+.spans {
+    color: #8B0000;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+}
+
+  /* =========================
+     FORMFUNC > MESSAGES > END
+     ========================= */
+
+
+
+
+
+/* =====================================
+   @media (max-width: 700px) > BEGINNING
+   ===================================== */
+
+@media (max-width: 700px) {
+  .input_group {
+    flex-wrap: wrap;
+  }
+
+  form {
+    margin: 0;
+  }
+
+  .formFunc h1 {
+    font-size: 4rem;
+  }
+}
+
+/* ===============================
+   @media (max-width: 700px) > END
+   =============================== */

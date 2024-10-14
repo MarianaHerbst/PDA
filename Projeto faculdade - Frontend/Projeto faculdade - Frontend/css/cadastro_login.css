@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* ==============================
+   GLOBAL STYLIZATION > BEGINNING
+================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  font-size: 62.5%;
+}
+
+:root {
+  --back-color: rgb(24, 24, 24);
+  --header-color: rgb(17, 17, 17);
+  --font-color: rgb(219, 219, 219);
+  --container-border: rgba(0, 0, 0, 0.3);
+
+  --link-color: rgb(179, 179, 179, 0.6);
+  
+  --blue-gradient-color: linear-gradient(to right, var(--font-color) 20%, rgba(0,212,255,1) 100%);
+  --text-blue-gradient-color: linear-gradient(to bottom, var(--font-color) 20%, rgba(0,212,255,1) 100%) border-box;
+
+}
+
+.light {
+  --back-color: rgb(255, 255, 255);
+  --header-color: rgb(251, 250, 244);
+  --font-color: rgb(12, 12, 12);
+  --container-border: rgba(219, 219, 219, 1);
+
+  --link-color: rgba(107, 105, 105, 1);
+  
+  --blue-gradient-color: linear-gradient(to right, rgba(0,212,255,1) 35%, var(--font-color) 80%);
+  --text-blue-gradient-color: linear-gradient(to bottom, rgba(0,212,255,1) 35%, var(--font-color) 80%) border-box;
+}
+
+/* ========================
+   GLOBAL STYLIZATION > END
+=========================== */
+
+/* ===============================
+   GENERAL STYLIZATION > BEGINNING
+================================== */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--back-color);
+  color: var(--font-color);
+  transition: all 0.3s;
+  font-weight: 600;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  padding: 0.5% 0.5% 0 0.5%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
+  background: var(--header-color);
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+
+header.hidden {
+  transform: translateY(-100%);
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--back-color);
+}
+
+main {
+  height: 100%;
+}
+
+.container:not(header .container) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid var(--container-border);
+  border-right: 1px solid var(--container-border);
+  border-bottom: 1px solid var(--container-border);
+  background-color: var(--back-color);
+  margin-bottom: 20px;
+}
+
+/* =========================
+   GENERAL STYLIZATION > END
+============================ */
+
+/* ===========================
+   ESTILIZAÇÃO NAV > BEGINNING
+============================== */
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--header-color);
+  padding: 10px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+}
+
+  /* ============================
+    NAV > LOGO IMAGE > BEGINNING
+    ============================ */
+
+.logo {
+  background: var(--text-blue-gradient-color);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 5rem;
+  font-weight: 800;
+  letter-spacing: 0px;
+}
+
+  /* ======================
+    NAV > LOGO IMAGE > END
+    ====================== */
+
+
+  /* ===============================
+    NAV > SIZE-TEXT > BEGINNING
+  =============================== */
+
+.size-text {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(var(--header-color), var(--header-color)) padding-box, var(--blue-gradient-color) border-box;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  padding: 2px 7px;
+  gap: 2rem;
+  width: 9rem;
+}
+
+  /* =====================
+    NAV > SIZE-TEXT > END
+  ======================== */
+
+
+  /* ====================================
+    NAV > INCREASE TEXT SIZE > BEGINNING
+  ======================================= */
+
+.size-text .button-size_text {
+  font-size: 2rem;
+  transition: all 1s;
+  background: transparent;
+  color: var(--font-color);
+  font-weight: 600;
+  border: none;
+}
+
+.size-text .button-size_text:hover {
+  opacity: 60%;
+  transform: scale(1.1);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+  /* ==============================
+    NAV > INCREASE TEXT SIZE > END
+  ================================= */
+
+
+  /* ==========================================
+    NAV > DARK AND WHITE MODE ICON > BEGINNING
+  ============================================= */
+
+.icons {
+  font-size: 3rem;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+  /* ==========================================
+    NAV > MENU > DARK AND WHITE MODE ICON > END
+  ============================================= */
+
+/* =========
+   NAV > END
+============ */
+
+
+
+
+/* =======================
+   FORMULÁRIOS > BEGINNING
+========================== */
+
+.container .formCadastro, .container #loginForm {
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 3px 4px 5px 4px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+}
+
+.container #loginForm {
+  max-width: 500px;
+}
+
+.formCadastro .input_group {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.formCadastro h1, #loginForm h1 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-size: 5rem;
+  background: var(--text-blue-gradient-color);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s;
+}
+
+  /* ========================
+  CONTAINER_INPUT > BEGINNING
+  =========================== */
+
+.formCadastro .container_input, #loginForm .container_input {
+  margin-bottom: 15px;
+  text-align: left;
+  width: 100%;
+}
+
+.container_input label {
+  font-size: 1.6rem;
+  color: var(--font-color);
+  margin-left: 5px;
+}
+
+.container_input input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  background: rgba(143, 142, 142, 0.3);
+  border-radius: 15px;
+  font-size: 1.6rem;
+  color: var(--font-color);
+  font-weight: 800;
+}
+
+input[readonly] {
+  background: rgba(143, 142, 142, 0.6);
+  cursor: not-allowed;
+}
+
+  /* ==================
+  CONTAINER_INPUT > END
+  ===================== */
+
+
+  /* ================
+  BUTTONS > BEGINNING
+  =================== */
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  margin: 15px 0;
+}
+
+.buttons button {
+  font-size: 22px;
+  padding: 10px;
+  width: 50%;
+  color: var(--font-color);
+  cursor: pointer;
+  border-radius: 15px;
+  background: linear-gradient(var(--back-color), var(--back-color)) padding-box, var(--blue-gradient-color) border-box;
+  border: 1px solid transparent;
+}
+
+  /* ==========
+  BUTTONS > END
+  ============= */
+
+
+  /* ==================================
+  ERROR AND SUCCESS MESSAGE > BEGINNING
+  ===================================== */
+
+#successMessage {
+  display: none;
+  color: rgb(0, 128, 0);
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+#loginMessage {
+color: rgb(0, 128, 0); 
+display: none;
+}
+
+#errorMessage {
+  color: #8B0000;
+  font-size: 1.5rem;
+}
+
+.spans {
+  color: #8B0000;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+}
+
+  /* ============================
+  ERROR AND SUCCESS MESSAGE > END
+  =============================== */
+
+
+  /* ===========================================
+  ASK IF YOU ALREADY HAVE AN ACCOUNT > BEGINNING
+  ============================================== */
+
+  #log {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  #log p {
+    color: var(--font-color);;
+    font-size: 1.8rem;
+  }
+  
+  #log a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.8rem;
+  }
+  
+  #log a:hover {
+    opacity: 60%;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+    /* =====================================
+    ASK IF YOU ALREADY HAVE AN ACCOUNT > END
+    ======================================== */
+
+/* =================
+   FORMULÁRIOS > END
+==================== */
+
+
+/* =================
+   MEDIA > BEGINNING
+==================== */
+
+@media (max-width: 700px) {
+  .input_group {
+    flex-wrap: wrap;
+  }
+
+  form {
+    margin: 0;
+  }
+}
+
+/* ===========
+   MEDIA > END
+============== */

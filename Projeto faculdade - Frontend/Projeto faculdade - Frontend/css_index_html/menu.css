@@ -1,0 +1,278 @@
+/* ===========================
+   NAV STYLIZATION > BEGINNING
+   =========================== */
+
+.nav-menu {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--header-color);
+    padding: 10px;
+}
+  
+    /* ============================
+       NAV > LOGO IMAGE > BEGINNING
+       ============================ */
+  
+.logo {
+    background: var(--text-blue-gradient-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 5rem;
+    font-weight: 800;
+    letter-spacing: 0px;
+}
+  
+    /* ======================
+       NAV > LOGO IMAGE > END
+       ====================== */
+  
+    /* ====================================
+       NAV > INCREASE TEXT SIZE > BEGINNING 
+       ==================================== */
+  
+  
+.size-text {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(var(--header-color), var(--header-color)) padding-box, var(--blue-gradient-color) border-box;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    padding: 2px 7px;
+    gap: 2rem;
+    width: 9rem;
+}
+  
+.size-text .button-size_text {
+    font-size: 2rem;
+    transition: all 1s;
+    background: transparent;
+    color: var(--font-color);
+    font-weight: 600;
+    border: none;
+}
+
+.size-text .button-size_text:hover {
+    opacity: 60%;
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+    /* ==============================
+       NAV > INCREASE TEXT SIZE > END 
+       ============================== */
+    
+    /* ===========================================
+       NAV > DARK AND WHITE MODE ICON > BEGINNING
+       =========================================== */
+    
+.icons {
+    font-size: 3rem;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+  
+    /* =====================================
+       NAV > DARK AND WHITE MODE ICON > END
+       ===================================== */
+  
+  
+    /* ======================
+       NAV > MENU > BEGINNING
+       ====================== */
+  
+.menu {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    width: 60%;
+    align-items: center;
+    height: auto;
+    background: var(--header-color);
+}
+  
+        /* =======================
+           MENU > LIST > BEGINNING
+           ======================= */
+    
+.menu li a {
+    color: var(--font-color);
+    font-weight: 600;
+    padding: 10px;
+    font-size: 2rem;
+    display: block;
+    text-decoration: none;
+}
+  
+.menu li a:hover {
+    opacity: 60%;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+        /* =================
+           MENU > LIST > END
+           ================= */
+  
+  
+        /* ================================
+           MENU > DIVIDING LINE > BEGINNING
+           ================================ */
+  
+.division_bar {
+    background-color: var(--font-color);
+    width: 1px;
+    height: 5rem;
+    margin: 0 12px;
+    opacity: 10%;
+}
+  
+        /* ==========================
+           MENU > DIVIDING LINE > END
+           ========================== */
+  
+  
+        /* ==========================================
+           MENU > LOG IN/REGISTER PROFILE > BEGINNING
+           ========================================== */
+  
+.container .perfil-login {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-image: var(--blue-gradient-color);
+    border-image-slice: 1;
+    border-bottom: 1px solid transparent;
+}
+  
+        /* ====================================
+           MENU > LOG IN/REGISTER PROFILE > END
+           ==================================== */
+  
+  
+        /* =================================
+           MENU > BUTTON STYLING > BEGINNING
+           ================================= */
+  
+.menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--font-color);
+    font-size: 2.4rem;
+    padding: 14px;
+    cursor: pointer;
+}
+  
+.menu-button::after {
+    content: "\2630";
+}
+  
+.menu-button.active::after {
+    content: "\2715";
+}
+  
+        /* ===========================
+           MENU > BUTTON STYLING > END
+           =========================== */
+  
+    /* ================
+       NAV > MENU > END
+       ================ */
+
+/* =====================
+   NAV STYLIZATION > END
+   ===================== */
+
+
+/* =====================================
+   @media (max-width: 766px) > BEGINNING 
+   ===================================== */
+
+@media (max-width: 766px) {
+
+/* ============================
+   NAV > LOGO IMAGE > BEGINNING
+   ============================ */
+
+    .logo {
+        width: 60%;
+    }
+
+/* ======================
+   NAV > LOGO IMAGE > END
+   ====================== */
+
+
+/* ======================
+   NAV > MENU > BEGINNING
+   ====================== */
+
+    .menu-button {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        flex-direction: column;
+        width: 100%;
+        height: 0;
+        left: 0;
+        top:100%;
+        gap: 5px;
+        overflow: hidden;
+        transition: height 0.5s ease, opacity 0.5s ease; 
+    }
+
+    .menu.show {
+        top:100%;
+        height: 331.5px;
+        border-image: var(--blue-gradient-color);
+        border-image-slice: 1;
+        border-bottom: 1px solid transparent;
+    }
+
+    .menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* ================================
+       MENU > DIVIDING LINE > BEGINNING
+       ================================ */
+   
+    .menu .division_bar {
+        display: none;
+    }
+
+    /* ==========================
+       MENU > DIVIDING LINE > END
+       ========================== */
+
+/* ================
+   NAV > MENU > END
+   ================ */
+
+/* ==========================================
+   MENU > LOG IN/REGISTER PROFILE > BEGINNING
+   ========================================== */
+
+    .container .perfil-login {
+        border-bottom: none;
+    }
+
+    .perfil-login div {
+        width: 100%;
+    }
+/* ====================================
+   MENU > LOG IN/REGISTER PROFILE > END
+   ==================================== */
+
+}; 
+
+/* ===============================
+   @media (max-width: 766px) > END 
+   =============================== */

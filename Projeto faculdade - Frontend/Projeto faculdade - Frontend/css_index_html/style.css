@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* ==============================
+   GLOBAL STYLIZATION > BEGINNING
+   ============================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  font-size: 62.5%;
+}
+
+:root {
+  --back-color: rgb(24, 24, 24);
+  --header-color: rgb(17, 17, 17);
+  --font-color: rgb(219, 219, 219);
+  --container-border: rgba(0, 0, 0, 0.3);
+
+  --back-menu-logado: rgb(24, 24, 24);
+
+  --blue-gradient-color: linear-gradient(to right, var(--font-color) 20%, rgba(0,212,255,1) 100%);
+  --text-blue-gradient-color: linear-gradient(to bottom, var(--font-color) 20%, rgba(0,212,255,1) 100%) border-box;
+
+  --img-section-one: url(/images/main_section_one/section_one_dark.png);
+
+  --left-arrow-section-two : url(/images/main_section_two/arrows/white_left_arrow.png);
+  --right-arrow-section-two : url(/images/main_section_two/arrows/white_right_arrow.png);
+
+
+}
+
+.light {
+  --back-color: rgb(255, 255, 255);
+  --header-color: rgb(253, 253, 253);
+  --font-color: rgb(12, 12, 12);
+  --container-border: rgba(219, 219, 219, 1);
+
+  --back-menu-logado: rgb(240, 239, 239);
+
+  --blue-gradient-color: linear-gradient(to right, rgba(0,212,255,1) 35%, var(--font-color) 80%);
+  --text-blue-gradient-color: linear-gradient(to bottom, rgba(0,212,255,1) 35%, var(--font-color) 80%) border-box;
+
+  --img-section-one: url(/images/main_section_one/section_one_white.png);
+
+  --left-arrow-section-two : url(/images/main_section_two/arrows/black_left_arrow.png);
+  --right-arrow-section-two : url(/images/main_section_two/arrows/black_right_arrow.png);
+
+}
+
+/* ========================
+   GLOBAL STYLIZATION > END
+   ======================== */
+
+
+/* ===============================
+   GENERAL STYLIZATION > BEGINNING
+   =============================== */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--back-color);
+  color: var(--font-color);
+  transition: all 0.3s;
+  font-weight: 600;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  transition: all 0.3s ease;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  padding: 0.5% 0.5% 0 0.5%; 
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
+  background: var(--header-color);
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+
+header.hidden {
+  transform: translateY(-100%);
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container:not(header .container ) {
+    /* box-shadow: 3px 4px 5px 4px rgba(0, 0, 0, 0.5); */
+    /* box-shadow: inset 3px 1px 10px rgba(0, 0, 0, 0.5); */
+    border-left: 1px solid  var(--container-border);
+    border-right: 1px solid var(--container-border);
+
+}
+
+/* =========================
+   GENERAL STYLIZATION > END
+   ========================= */

@@ -1,0 +1,72 @@
+/* ==================
+   FOOTER > BEGINNING 
+   ================== */
+
+footer {
+    background-color: var(--header-color);
+    color: var(--font-color);
+    text-align: center;
+    padding: 20px;
+    box-shadow: 3px 4px 5px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 15px;
+}
+  
+footer h2, footer h3 {
+    background: var(--text-blue-gradient-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 15px;
+    font-size: 3rem;
+}
+
+footer h3 {
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+/* ==============================
+   FOOTER > MENU_DEVS > BEGINNING 
+   ============================== */
+  
+footer .menu_devs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    gap: 15px;
+}
+
+.menu_devs a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: var(--font-color);
+    display: block;
+}
+
+.menu_devs a:hover {
+    opacity: 60%;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+/* ========================
+   FOOTER > MENU_DEVS > END 
+   ======================== */
+
+.devs {
+    display: flex;
+    font-size: 2rem;
+    justify-content: center;
+    gap: 10px;
+}
+
+.direitos_reservados {
+    font-size: 1rem;
+    margin-top: 5px;
+}
+  
+/* ============
+   FOOTER > END 
+   ============ */
